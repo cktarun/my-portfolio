@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="skill.css">
+</head>
+<body>
+  <div id="main-gc">
+    <div class="main-section d-flex">
+      <div class="skills d-flex">
+        <h2 id="html"><img src="/images/icons8-html-48.png" alt=""></h2>
+        <h2 id="css"><img src="/images/icons8-css-48.png" alt=""></h2>
+        <h2 id="javascript"><img src="/images/icons8-javascript-48.png" alt=""></h2>
+        <h2 id="react"><img src="/images/icons8-react-native-48.png" alt=""></h2>
+        <h2 id="tailwind"><img src="/images/icons8-tailwind-css-48.png" alt=""></h2>
+        <h2 id="php"><img src="/images/icons8-php-48.png" alt=""></h2>
+        <h2 id="mysql"><img src="/images/icons8-mysql-48 (2).png" alt=""></h2>
+        <h2 id="java"><img src="/images/icons8-java-48.png" alt=""></h2>
+        <h2 id="python"><img src="/images/icons8-python-48 (1).png" alt=""></h2>
+        <h2 id="figma"><img src="/images/icons8-figma-48.png" alt=""></h2>
+        <h2 id="canva"><img src="/images/icons8-canva-48.png" alt=""></h2>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+  ></script>
+  <script>
+    
+const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+    console.log(e)
+})
+
+function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+
+
+
+let tll = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.main-section',
+        pin: true,
+        start: '50% 50%',
+        end: '300% 50%',
+        scrub: true,
+        // markers: true,
+    }
+});
+
+tll.to("#python", {
+    opacity: 1,
+    filter: "blur(0px)"
+})
+    .to("#java", {
+        opacity: 1,
+        filter: "blur(0px)",
+        delay: -0.3
+    })
+    .to("#figma", {
+        opacity: 1,
+        filter: "blur(0px)",
+        delay: -0.3
+    })
+    .to("#php", {
+        opacity: 1,
+        filter: "blur(0px)",
+        delay: -0.3
+    })
+    .to("#canva", {
+        opacity: 1,
+        filter: "blur(0px)",
+        delay: -0.3
+    })
+    .to("#html", {
+        opacity: 1,
+        filter: "blur(0px)",
+        delay: -0.3
+    })
+    .to("#mysql", {
+        opacity: 1,
+        filter: "blur(0px)",
+        delay: -0.3
+    })
+    .to("#react", {
+        opacity: 1,
+        filter: "blur(0px)",
+        delay: -0.3
+    })
+    .to("#figma", {
+        opacity: 1,
+        filter: "blur(0px)",
+        delay: -0.3
+    })
+    .to("#javascript", {
+        opacity: 1,
+        filter: "blur(0px)",
+        delay: -0.3
+    })
+    .to("#tailwind", {
+        opacity: 1,
+        filter: "blur(0px)",
+        delay: -0.3
+    })
+    .to("#css", {
+        opacity: 1,
+        filter: "blur(0px)",
+        delay: -0.3
+    })
+
+  </script>
+  <!-- <script src="script.js"></script> -->
+</body>
+</html>
